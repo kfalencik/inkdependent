@@ -1,0 +1,33 @@
+.artists{
+
+	&__item{
+		margin: 20px 0;
+	}
+
+	&__item-image{
+		overflow: hidden;
+
+		img{
+			max-width: 100%;
+			transition: all .5s ease;
+
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__item-details{
+		margin-top: 15px;
+
+		.h3{
+			font-family: $font-bold;
+			letter-spacing: 2px;
+			font-size: 18px;
+		}
+
+		p{
+			font-size: 18px;
+		}
+	}
+}

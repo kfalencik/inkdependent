@@ -1,0 +1,28 @@
+
+html,
+body {
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+
+}
+
+html {
+	font-size: 14px;
+	font-family: 'Open Sans',sans-serif;
+	scroll-behavior: smooth;
+}
+
+p{
+	margin: 15px 0;
+}
+
+a{
+	text-decoration: none;
+	transition: all .5s ease;
+}
+
+section{
+	padding: 100px 0;
+	overflow: hidden;
+}

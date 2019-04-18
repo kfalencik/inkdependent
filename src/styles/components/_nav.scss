@@ -1,0 +1,32 @@
+.main-nav{
+	float: right;
+	width: calc(100% - 300px);
+	overflow: hidden;
+	margin-top: 12px;
+
+	ul{
+		display: none;
+
+		@media(min-width: $breakpoint-lg){
+			float: right;
+			display: block;
+		}
+	}
+
+	&__link{
+		float: left;
+		margin-left: 35px;
+
+		a{
+			color: #333;
+			font-family: $font-bold;
+			font-size: 14px;
+			text-transform: uppercase;
+			padding: 15px 0;
+
+			&:hover, &.active {
+				color: $gold-color;
+			}
+		}
+	}
+}

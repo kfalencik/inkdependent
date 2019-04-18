@@ -1,0 +1,26 @@
+<section id="hero" class="hero">
+
+	<button @click="changeSlide(heroCurrentSlide - 1)" class="hero__nav-item"><i class="fas fa-chevron-left"></i></button>
+	<button @click="changeSlide(heroCurrentSlide + 1)" class="hero__nav-item"><i class="fas fa-chevron-right"></i></button>
+
+	{% for item in slideshow %}
+		<transition-group :name="heroSlideDirection">
+			<div :key="{{ loop.index }}" v-if="heroCurrentSlide == {{ loop.index }}" class="hero__slide">
+				<div class="hero__slide-image">
+					<img src="{{ item.image }}" alt="Slide {{ loop.index }}" />
+				</div>
+
+				<div class="hero__slide-content u-text-center">
+					{% if item.contentType == 'image' %}
+						<img src="{{ item.content }}" alt="{{ item.title }}" />
+						<h1 class="sr-only">{{ item.title }}</h1>
+					{% endif %}
+
+					{% if item.contentType == 'text' %}
+						<h1 class="h1 u-white">{{ item.content }}</h1>
+					{% endif %}
+				</div>
+			</div>
+		</transition-group>
+	{% endfor %}
+</section>

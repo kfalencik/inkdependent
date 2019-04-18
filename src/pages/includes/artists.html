@@ -1,0 +1,22 @@
+<section id="artists" class="artists">
+	<div class="container">
+		<div class="row">
+			<div class="col u-text-center"><h2 class="h2 u-white">Artists</h2></div>
+		</div>
+
+		<div class="row">
+			{% for item in artists %}
+				<div class="artists__item u-text-center col-md-6 col-lg-3">
+					<div class="artists__item-image" @click="openTattooAlbum({{item.album}})">
+						<img src="{{ item.image }}" alt="{{ item.name }}" />
+					</div>
+
+					<div class="artists__item-details">
+						<h3 class="h3 u-white">{{ item.name }}</h3>
+						<p class="u-grey u-cinzel">{{ item.description }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

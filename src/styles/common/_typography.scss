@@ -1,0 +1,44 @@
+//*****************************************************************************************
+// Main typography styles. If anything is specific to a component, put it in that SCSS file!
+//
+// - Use the font-size mixin
+//******************************************************************************************/
+
+.h1, .h2, .h3{
+	font-family: $font-title;
+	font-weight: bold;
+}
+
+.h1 {
+	@include font-size(3);
+	margin-bottom: 35px;
+
+	@media(min-width: $breakpoint-lg){
+		@include font-size(4.5);
+	}
+}
+
+.h2{
+	@include font-size(2.6);
+
+	@media(min-width: $breakpoint-lg){
+		@include font-size(3.5);
+	}
+}
+
+.u-oswald{
+	font-family: $font-bold;
+}
+
+.u-cinzel{
+	font-family: $font-body;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-stroke: 0.2px;
+	line-height: 1.6;
+}
+
+p.u-cinzel{
+	font-size: 24px;
+}

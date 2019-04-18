@@ -1,0 +1,47 @@
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col u-white u-text-center">
+				<h2 class="h2 u-cinzel"><span class="u-gold">Have any questions?</span> <span class="u-white">Let us know!</span></h2>
+				<p class="contact__item"><i class="fas fa-map-marker-alt"></i> {{ contact.address }}</p>
+				<p class="contact__item"><i class="fas fa-envelope"></i> {{ contact.email }}</p>
+				<p class="contact__item"><i class="fas fa-phone"></i> {{ contact.phone }}</p>
+
+				<form method="POST">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<p class="contact__confirmation" v-if="contactConfirmation != ''">${contactConfirmation}</p>
+								<p class="contact__error" v-if="contactError != ''">${contactError}</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-4">
+								<label class="sr-only" for="contact-name">Name</label>
+								<input id="contact-name" v-model="contactName" name="name" placeholder="Your name" required />
+							</div>
+
+							<div class="col-lg-4">
+								<label class="sr-only" for="contact-email">Email</label>
+								<input id="contact-email" v-model="contactEmail" name="from" type="email" placeholder="Your email" required />
+							</div>
+
+							<div class="col-lg-4">
+								<label class="sr-only" for="contact-subject">Subject</label>
+								<input id="contact-subject" v-model="contactSubject" name="subject" placeholder="Your subject" required />
+							</div>
+
+							<div class="col">
+								<label class="sr-only" for="contact-message">Message</label>
+								<textarea id="contact-message" v-model="contactMessage" name="message" placeholder="Your message" required></textarea>
+
+								<button class="btn" @click="sendEmail">Send your message</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,54 @@
+.contact{
+
+	&__item{
+		font-size: 16px;
+		font-family: $font-bold;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		i{
+			margin-right: 10px;
+			font-size: 22px;
+		}
+	}
+
+	&__confirmation{
+		background: $gold-color;
+		font-family: $font-body;
+		font-size: 20px;
+		letter-spacing: 3px;
+		padding: 15px 0;
+		margin: 15px 0;
+	}
+
+	&__error{
+		background: orangered;
+		font-family: $font-body;
+		font-size: 20px;
+		letter-spacing: 3px;
+		padding: 15px 0;
+		margin: 15px 0;
+	}
+
+	form{
+		margin-top: 35px;
+
+		input, textarea{
+			width: 100%;
+			border: 1px solid $grey-color;
+			background: none;
+			resize: none;
+			font-family: $font-bold;
+			text-transform: uppercase;
+			padding: 15px;
+			margin-bottom: 20px;
+			color: #fff;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		textarea{
+			height: 200px;
+		}
+	}
+}

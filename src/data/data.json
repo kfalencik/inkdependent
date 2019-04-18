@@ -1,0 +1,72 @@
+{
+	"title": "Inkdependent - Tattoo & Piercing",
+	"description": "Inkdependent is a tattoo & piercing studio based in Edinburgh, Scotland. We love getting tattoos as much as we love to design them and we take it earnestly and committedly because we aware that our artwork will remain with our customers until the end.",
+	"slideshow": [
+		{
+			"title": "Inkdependent",
+			"image": "./images/slideshow/slide-1.jpg",
+			"contentType": "image",
+			"content": "./images/logo.png"
+		},
+		{
+			"title": "Multi awarded artists",
+			"image": "./images/slideshow/slide-2.jpg",
+			"contentType": "text",
+			"content": "Multi awarded artists"
+		},
+		{
+			"title": "Custom designed tattoos",
+			"image": "./images/slideshow/slide-3.jpg",
+			"contentType": "text",
+			"content": "Custom designed tattoos"
+		},
+		{
+			"title": "Standard & unusual piercing",
+			"image": "./images/slideshow/slide-4.jpg",
+			"contentType": "text",
+			"content": "Standard & unusual piercing"
+		}
+	],
+	"about": {
+		"title": "About us",
+		"content": "Inkdependent tattoo studio has been established in 2009, but our ink-adventure had started about 10 years ago. We love getting tattoos as much as we love to design them and we take it earnestly and committedly because we aware that our artwork will remain with our customers until the end."
+	},
+	"artists":[
+		{
+			"name": "Marcin Ptak",
+			"description": "Portraits, color and black and grey realism.",
+			"image": "./images/artists/marcin.jpg",
+			"album": 0
+		},
+		{
+			"name": "Marek Skalny",
+			"description": "Color, black and grey realism.",
+			"image": "./images/artists/marek.jpg",
+			"album": 1
+		},
+		{
+			"name": "Daniel Baczewski",
+			"description": "Illustrative & blackwork.",
+			"image": "./images/artists/daniel.jpg",
+			"album": 2
+		},
+		{
+			"name": "Wojtek Przychodzki",
+			"description": "Geometric blackwork, bodypiercing & scaryfication.",
+			"image": "./images/artists/wojtek.jpg",
+			"album": 3
+		}
+	],
+	"social": {
+		"title": "Don't forget to add us on social media to see latest artwork and infromation about guestspot artists",
+		"facebook": "inkdependenttattoos",
+		"facebookUrl": "https://www.facebook.com/inkdependenttattoos",
+		"instagram": "inkdependenttattoos",
+		"instagramUrl": "https://www.instagram.com/inkdependenttattoos"
+	},
+	"contact": {
+		"email": "inkdependenttattoos@gmail.com",
+		"phone": "0131 623 65 65",
+		"address": "56 Dalry Road, EH11 2BA, Edinburgh, UK"
+	}
+}
