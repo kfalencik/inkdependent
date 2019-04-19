@@ -23,6 +23,7 @@ export default function() {
 			tattooOverlay: false,
 			activeTattooPicture: 0,
 			staggerTattooAlbums: 0,
+			menuStatus: false,
 			year: 2020
 		},
 		mounted: function() {
@@ -54,12 +55,14 @@ export default function() {
 								// Marcin 2019
 								album.name = 'Marcin';
 								album.order = 0;
+								album.instagram = 'https://www.instagram.com/marcinptak_tattoo';
 								app.tattooAlbums.push(album);
 							}
 
 							if (album.id === '10160033361505582') {
 								// Marek 2018
 								album.name = 'Marek';
+								album.instagram = 'https://www.instagram.com/marekskalny_art';
 								album.order = 1;
 								app.tattooAlbums.push(album);
 							}
@@ -67,6 +70,7 @@ export default function() {
 							if (album.id === '10153556071625582') {
 								// Daniel
 
+								album.instagram = 'https://www.instagram.com/danielbacz';
 								album.order = 2;
 								app.tattooAlbums.push(album);
 							}
@@ -74,6 +78,7 @@ export default function() {
 							if (album.id === '10156539880325582') {
 								// Wojtek
 
+								album.instagram = 'https://www.instagram.com/alternative_bodyart_by_wojtek';
 								album.order = 3;
 								app.tattooAlbums.push(album);
 							}
@@ -82,6 +87,7 @@ export default function() {
 								// Gzy
 
 								album.name = 'Gzy Ex Silesia';
+								album.instagram = 'https://www.instagram.com/gzyexsilesia';
 								album.order = 4;
 								app.tattooAlbums.push(album);
 							}
@@ -90,6 +96,7 @@ export default function() {
 								// Karol
 
 								album.name = 'Karol';
+								album.instagram = 'https://www.instagram.com/charlie__lame';
 								album.order = 5;
 								app.tattooAlbums.push(album);
 							}
@@ -98,6 +105,7 @@ export default function() {
 								// Sofia
 
 								album.name = 'Sofia';
+								album.instagram = 'https://www.instagram.com/pochiehuntie';
 								album.order = 6;
 								app.tattooAlbums.push(album);
 							}
@@ -106,6 +114,7 @@ export default function() {
 								// Ash
 
 								album.name = 'Ash';
+								album.instagram = 'https://www.instagram.com/achristieart';
 								album.order = 7;
 								app.tattooAlbums.push(album);
 							}
@@ -137,6 +146,9 @@ export default function() {
 						app.heroCurrentSlide++;
 					}
 				}, 8000);
+			},
+			toggleMenu: function(){
+				this.menuStatus = !this.menuStatus;
 			},
 			changeSlide: function(slide) {
 				if (slide < this.heroCurrentSlide) {

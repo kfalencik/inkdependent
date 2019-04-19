@@ -1,10 +1,4 @@
 .tattoo{
-	padding-top: 0;
-
-	.container{
-		padding-top: 100px;
-		border-top: 1px dashed $grey-color;
-	}
 
 	&__item{
 		margin: 20px 0;
@@ -37,7 +31,12 @@
 		.h3{
 			font-family: $font-bold;
 			letter-spacing: 2px;
-			font-size: 18px;
+			font-size: 20px;
+		}
+
+		a{
+			color: #fff;
+			font-size: 16px;
 		}
 
 	}
@@ -66,23 +65,37 @@
 	&__overlay-nav{
 		z-index: 1000;
 		background: none;
-		font-size: 50px;
+		font-size: 35px;
 		color: #fff;
 		border: none;
 		position: absolute;
-		left: 50px;
+		left: 5px;
 		cursor: pointer;
+		text-shadow: 0 0 5px rgba(0,0,0,0.75);
+
+		@media(min-width: $breakpoint-lg){
+			left: 50px;
+			font-size: 50px;
+		}
 
 		&--next{
 			left: auto;
-			right: 50px;
+			right: 5px;
+
+			@media(min-width: $breakpoint-lg){
+				right: 50px;
+			}
 		}
 
 		&--close{
 			top: 50px;
 			left: auto;
-			right: 50px;
+			right: 5px;
 			font-size: 30px;
+
+			@media(min-width: $breakpoint-lg){
+				right: 50px;
+			}
 		}
 	}
 

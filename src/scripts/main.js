@@ -38,7 +38,7 @@ map.on('load', function () {
 						properties: {},
 						geometry: {
 							type: 'Point',
-							coordinates: [-3.2176257, 55.9446]
+							coordinates: [-3.2179037, 55.9446]
 						}
 					}]
 				}

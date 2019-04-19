@@ -1,7 +1,7 @@
-<section id="tattoo" class="tattoo">
+<section id="artists" class="tattoo">
 	<div class="container">
 		<div class="row">
-			<div class="col u-text-center"><h2 class="h2 u-white">Tattoo</h2></div>
+			<div class="col u-text-center"><h2 class="h2 u-white">Artists</h2></div>
 		</div>
 
 
@@ -13,6 +13,7 @@
 
 				<div class="tattoo__item-title">
 					<h3 class="h3 u-white">${item.name}</h3>
+					<p><a :href="item.instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a></p>
 				</div>
 
 				<div @click="closeTattooAlbum" v-if="tattooOverlay === true && activeTattooAlbum === index" class="tattoo__overlay">
