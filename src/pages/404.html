@@ -1,27 +1,18 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>Page not found</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="apple-touch-icon" href="/icon.png">
+{% include "./includes/header.html" %}
+{% include "./includes/nav.html" %}
 
-		{% if ('' | getGlobal).context.task === 'build' %}
-			<link rel="stylesheet" type="text/css" href="/styles/main.min.css" media="screen">
-		{% else %}
-			<link rel="stylesheet" type="text/css" href="/styles/main.css" media="screen">
-		{% endif %}
-	</head>
-	<body>
-		<h1>Page not found</h1>
+<section class="about u-text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+					<h1 class="h2">Sorry this page does not exist</h1>
+					<p class="u-cinzel">Please make sure you're trying to access an exisitng page and try again</p>
+			</div>
+		</div>
+	</div>
+</section>
 
-		{% include "./includes/footer.html" %}
+{% include "./includes/contact.html" %}
+{% include "./includes/social.html" %}
+{% include "./includes/footer.html" %}
 
-		{% if ('' | getGlobal).context.task === 'build' %}
-			<script src="/scripts/main.min.js"></script>
-		{% else %}
-			<script src="/scripts/main.js"></script>
-		{% endif %}
-	</body>
-</html>

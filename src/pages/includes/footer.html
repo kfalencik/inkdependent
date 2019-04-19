@@ -4,7 +4,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col">
-							<p><img width="130" src="./images/logo.png" alt="Logo" /></p>
+							<p><img width="130" src="images/logo.png" alt="Logo" /></p>
 							<p>Copyright ${year} Some rights reserved</p>
 							<p class="u-text-small">Made by <a class="u-white" href="mailto:kfalencik@gmail.com">Kevin Falencik</a></p>
 						</div>
@@ -22,9 +22,9 @@
 		<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
 		{% if ('' | getGlobal).context.task === 'build' %}
-			<script src="/scripts/main.min.js"></script>
+			<script src="scripts/main.min.js"></script>
 		{% else %}
-			<script src="/scripts/main.js"></script>
+			<script src="scripts/main.js"></script>
 		{% endif %}
 	</body>
 </html>
