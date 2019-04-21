@@ -49,6 +49,7 @@
     "fb": "^2.0.0",
     "mapbox": "^1.0.0-beta10",
     "mapbox-gl": "^0.53.1",
-    "natives": "^1.1.6"
+    "natives": "^1.1.6",
+    "vue-touch": "^2.0.0-beta.4"
   }
 }

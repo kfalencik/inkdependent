@@ -1,4 +1,5 @@
 import Vue from './vendor/vue';
+import './vendor/swiped';
 
 export default function() {
 	new Vue({
@@ -34,6 +35,14 @@ export default function() {
 
 			window.addEventListener('scroll', function() {
 				app.getCurrentMenuLink();
+			});
+
+			document.querySelector('.hero').addEventListener('swiped-right', function(){
+				app.changeSlide(app.heroCurrentSlide - 1);
+			});
+
+			document.querySelector('.hero').addEventListener('swiped-left', function(){
+				app.changeSlide(app.heroCurrentSlide + 1);
 			});
 
 			// Facebook API

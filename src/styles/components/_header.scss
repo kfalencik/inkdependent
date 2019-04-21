@@ -10,5 +10,6 @@ header{
 	@media(min-width: $breakpoint-lg){
 		position: -webkit-sticky; /* Safari */
 		position: sticky;
+		z-index: 999;
 	}
 }
