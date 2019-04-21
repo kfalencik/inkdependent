@@ -130,7 +130,7 @@ export default function() {
 	
 					}
 				);
-			}, 10000);
+			}, 1000);
 
 			
 		},
