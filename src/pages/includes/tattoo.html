@@ -4,6 +4,13 @@
 			<div class="col u-text-center"><h2 class="h2 u-white">Artists</h2></div>
 		</div>
 
+		<transition name="fade">
+			<div v-if="tattooAlbums.length === 0" class="row">
+				<div class="col u-text-center">
+					<img src="images/loading.svg" alt="Loading" />
+				</div>
+			</div>
+		</transition>
 
 		<transition-group class="row" name="fade">
 			<div v-if="tattooAlbums.length > 0 && staggerTattooAlbums > index" v-for="(item, index) in tattooAlbums" :key="index" class="tattoo__item u-text-center col-md-4 col-lg-3">
