@@ -7,7 +7,7 @@
 				<p class="contact__item"><i class="fas fa-envelope"></i> {{ contact.email }}</p>
 				<p class="contact__item"><i class="fas fa-phone"></i> {{ contact.phone }}</p>
 
-				<form method="POST">
+				<form id="contact-form" @submit="sendEmail" method="POST">
 					<div class="container">
 						<div class="row">
 							<div class="col">
@@ -19,12 +19,12 @@
 						<div class="row">
 							<div class="col-lg-4">
 								<label class="sr-only" for="contact-name">Name</label>
-								<input id="contact-name" v-model="contactName" name="name" placeholder="Your name" required />
+								<input id="contact-name" v-model="contactName" name="from_name" placeholder="Your name" required />
 							</div>
 
 							<div class="col-lg-4">
 								<label class="sr-only" for="contact-email">Email</label>
-								<input id="contact-email" v-model="contactEmail" name="from" type="email" placeholder="Your email" required />
+								<input id="contact-email" v-model="contactEmail" name="reply_to" type="email" placeholder="Your email" required />
 							</div>
 
 							<div class="col-lg-4">
@@ -34,9 +34,9 @@
 
 							<div class="col">
 								<label class="sr-only" for="contact-message">Message</label>
-								<textarea id="contact-message" v-model="contactMessage" name="message" placeholder="Your message" required></textarea>
+								<textarea id="contact-message" v-model="contactMessage" name="message_html" placeholder="Your message" required></textarea>
 
-								<button class="btn" @click="sendEmail">Send your message</button>
+								<button type="submit" class="btn">Send your message</button>
 							</div>
 						</div>
 					</div>

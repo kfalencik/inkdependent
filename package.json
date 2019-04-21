@@ -45,6 +45,10 @@
     "watchify": "~3.9.0"
   },
   "dependencies": {
+    "emailjs": "^2.2.0",
+    "fb": "^2.0.0",
+    "mapbox": "^1.0.0-beta10",
+    "mapbox-gl": "^0.53.1",
     "natives": "^1.1.6"
   }
 }

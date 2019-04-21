@@ -1,5 +1,4 @@
 import Vue from './vendor/vue';
-import {emailSend, emailAjaxPost, emailAjax, emailCreateCORSRequest} from './vendor/smtp';
 
 export default function() {
 	new Vue({
@@ -39,100 +38,99 @@ export default function() {
 
 			// Facebook API
 
-			window.fbAsyncInit = function() {
-				FB.init({
-					appId: '1700806313540957',
-					xfbml: true,
-					version: 'v3.2'
-				});
+			FB.init({
+				appId: '1700806313540957',
+				xfbml: true,
+				version: 'v3.2'
+			});
 
-				FB.api(
-					'/inkdependenttattoos?fields=albums.limit(50){name,count,cover_photo{source}, photos{source}}&access_token=1700806313540957|zFZcPCz9esyC1su57MnuDsLtRwg',
-					function(response) {
-						let albums = response.albums.data;
-						albums.forEach(function(album) {
-							if (album.id === '10161284757175582') {
-								// Marcin 2019
-								album.name = 'Marcin';
-								album.order = 0;
-								album.instagram = 'https://www.instagram.com/marcinptak_tattoo';
-								app.tattooAlbums.push(album);
-							}
+			FB.api(
+				'/inkdependenttattoos?fields=albums.limit(50){name,count,cover_photo{source}, photos{source}}&access_token=1700806313540957|zFZcPCz9esyC1su57MnuDsLtRwg',
+				function(response) {
+					console.log(response);
+					let albums = response.albums.data;
+					albums.forEach(function(album) {
+						if (album.id === '10161284757175582') {
+							// Marcin 2019
+							album.name = 'Marcin';
+							album.order = 0;
+							album.instagram = 'https://www.instagram.com/marcinptak_tattoo';
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10160033361505582') {
-								// Marek 2018
-								album.name = 'Marek';
-								album.instagram = 'https://www.instagram.com/marekskalny_art';
-								album.order = 1;
-								app.tattooAlbums.push(album);
-							}
+						if (album.id === '10160033361505582') {
+							// Marek 2018
+							album.name = 'Marek';
+							album.instagram = 'https://www.instagram.com/marekskalny_art';
+							album.order = 1;
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10153556071625582') {
-								// Daniel
+						if (album.id === '10153556071625582') {
+							// Daniel
 
-								album.instagram = 'https://www.instagram.com/danielbacz';
-								album.order = 2;
-								app.tattooAlbums.push(album);
-							}
+							album.instagram = 'https://www.instagram.com/danielbacz';
+							album.order = 2;
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10156539880325582') {
-								// Wojtek
+						if (album.id === '10156539880325582') {
+							// Wojtek
 
-								album.instagram = 'https://www.instagram.com/alternative_bodyart_by_wojtek';
-								album.order = 3;
-								app.tattooAlbums.push(album);
-							}
+							album.instagram = 'https://www.instagram.com/alternative_bodyart_by_wojtek';
+							album.order = 3;
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10159146265255582') {
-								// Gzy
+						if (album.id === '10159146265255582') {
+							// Gzy
 
-								album.name = 'Gzy Ex Silesia';
-								album.instagram = 'https://www.instagram.com/gzyexsilesia';
-								album.order = 4;
-								app.tattooAlbums.push(album);
-							}
+							album.name = 'Gzy Ex Silesia';
+							album.instagram = 'https://www.instagram.com/gzyexsilesia';
+							album.order = 4;
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10160843000760582') {
-								// Karol
+						if (album.id === '10160843000760582') {
+							// Karol
 
-								album.name = 'Karol';
-								album.instagram = 'https://www.instagram.com/charlie__lame';
-								album.order = 5;
-								app.tattooAlbums.push(album);
-							}
+							album.name = 'Karol';
+							album.instagram = 'https://www.instagram.com/charlie__lame';
+							album.order = 5;
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10160543615490582') {
-								// Sofia
+						if (album.id === '10160543615490582') {
+							// Sofia
 
-								album.name = 'Sofia';
-								album.instagram = 'https://www.instagram.com/pochiehuntie';
-								album.order = 6;
-								app.tattooAlbums.push(album);
-							}
+							album.name = 'Sofia';
+							album.instagram = 'https://www.instagram.com/pochiehuntie';
+							album.order = 6;
+							app.tattooAlbums.push(album);
+						}
 
-							if (album.id === '10158468256865582') {
-								// Ash
+						if (album.id === '10158468256865582') {
+							// Ash
 
-								album.name = 'Ash';
-								album.instagram = 'https://www.instagram.com/achristieart';
-								album.order = 7;
-								app.tattooAlbums.push(album);
-							}
+							album.name = 'Ash';
+							album.instagram = 'https://www.instagram.com/achristieart';
+							album.order = 7;
+							app.tattooAlbums.push(album);
+						}
 
 
-						});
+					});
 
-						app.tattooAlbums.sort((a, b) => (a.order > b.order) ? 1 : -1);
+					app.tattooAlbums.sort((a, b) => (a.order > b.order) ? 1 : -1);
 
-						setInterval(function() {
-							if (app.staggerTattooAlbums < app.tattooAlbums.length) {
-								app.staggerTattooAlbums++;
-							}
-						}, 500);
+					setInterval(function() {
+						if (app.staggerTattooAlbums < app.tattooAlbums.length) {
+							app.staggerTattooAlbums++;
+						}
+					}, 500);
 
-					}
-				);
-			};
+				}
+			);
 		},
 		methods: {
 			initHeroSlider: function() {
@@ -203,14 +201,14 @@ export default function() {
 				event.preventDefault();
 
 				if (this.contactEmail !== '' && this.contactSubject !== '' && this.contactMessage !== '' && this.contactName != '') {
-					emailSend({
-						Host : 'smtp.elasticemail.com',
-						Username : 'kfalencik@gmail.com',
-						Password : 'e6b6b50b-415b-4cdf-8dd6-72f774eef952',
-						To : 'kfalencik@gmail.com',
-						From : 'kfalencik@gmail.com',
-						Subject : this.contactSubject,
-						Body : `Message from: ${this.contactName}, ${this.contactEmail} - ${this.contactMessage}`
+					let myform = document.querySelector('#contact-form');
+					let service_id = "default_service";
+					let template_id = "template_0FUSa2lo";
+
+					emailjs.sendForm(service_id,template_id,myform).then(function(){ 
+						//alert("Sent!");
+					}, function(err) {
+						//alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
 					});
 
 					this.contactMessage = '';

@@ -9,6 +9,10 @@ import scrollReveal from './scroll-reveal';
 mainVue();
 scrollReveal();
 
+(function(){
+	emailjs.init("user_zMe7fkxzmtQpKn9E5lzTw");
+ })();
+
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2ZhbGVuY2lrIiwiYSI6Im5KTlFLZjQifQ._3v1pa90DdSiutiwCiIccg';
 
 let map = new mapboxgl.Map({
