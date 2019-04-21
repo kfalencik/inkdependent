@@ -7,7 +7,7 @@
 //**********************************************/
 
 // Display
-.u-hidden {
+.u-hidden, [v-cloak] {
 	display: none;
 }
 
