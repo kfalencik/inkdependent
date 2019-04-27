@@ -54,7 +54,7 @@ export default function() {
 				});
 	
 				FB.api(
-					'/inkdependenttattoos?fields=albums.limit(50){name,count,cover_photo{source},photos{source}}&access_token=EAAYK39QmfV0BACNZA3PZArMwdzTEw0MRZAY3aNSsHlGUjLe4gFmcueteFw3G7orzMAoxErWhhw6ZCp595Y1y3OX7nq0cwpLDlU3qiELVbgTnHPZBlfYZC97VZBmVOdprKkUVM12gEwfm1Lafb7YOCInml0sCBKEPzSp0ZBEOWC1XBvRZCRNEKoZBOhe1PGjA8oxZCJk8UUUNmDKpAZDZD',
+					'/inkdependenttattoos?fields=albums.limit(50){name,count,cover_photo{source},photos{source}}&access_token=EAAe39aH7hokBAIZAaXIjr6yIvAZBZBvnZBi6vJvrRjsyh3knyfKH1E7zkmnYrWB45G3OaqK5MbqRHngfTKu25JKChaJP8uEwDXAC6SO7CjS6PZB9yRPh95lGqvXQy1ZCRsW5Aks7qF7l1WDaciQn8ZAXjZCvsdCumdWM6koVtKYMHgZDZD',
 					function(response) {
 						let albums = response.albums.data;
 						albums.forEach(function(album) {
