@@ -1,5 +1,3 @@
-// This is the 'Offline page' service worker
-
 const CACHE = 'pwabuilder-page';
 const offlineFallbackPage = 'offline.html';
 
