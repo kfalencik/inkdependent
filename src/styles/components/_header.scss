@@ -3,13 +3,13 @@ header{
 	padding: 15px 0;
 	position: fixed;
 	top: 0;
-	z-index: 999;
+	z-index: 9999;
 	width: 100%;
 	box-shadow: 0 5px 5px rgba(0,0,0,0.2);
 
 	@media(min-width: $breakpoint-lg){
 		position: -webkit-sticky; /* Safari */
 		position: sticky;
-		z-index: 999;
+		z-index: 9999;
 	}
 }

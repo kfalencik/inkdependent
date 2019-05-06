@@ -5,6 +5,7 @@
 	margin-top: 70px;
 	overflow: hidden;
 	position: relative;
+	z-index: 10;
 
 	@media(min-width: $breakpoint-lg){
 		margin-top: 0
@@ -79,7 +80,7 @@
 			display: block;
 		}
 
-		&:nth-child(2){
+		&:nth-child(3){
 			left: auto;
 			right: 20px;
 		}
