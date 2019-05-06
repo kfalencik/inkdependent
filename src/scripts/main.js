@@ -56,8 +56,8 @@ map.on('load', function () {
 
 map.scrollZoom.disable();
 
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/service-worker.js', {
-		updateViaCache: 'none'
-	});
-}
+// if ('serviceWorker' in navigator) {
+// 	navigator.serviceWorker.register('/service-worker.js', {
+// 		updateViaCache: 'none'
+// 	});
+// }
