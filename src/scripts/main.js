@@ -6,6 +6,15 @@ import './vendor/polyfills';
 import mainVue from './main-vue';
 import scrollReveal from './scroll-reveal';
 
+
+// Defer images
+let imgDefer = document.getElementsByTagName('img');
+for (let i = 0; i < imgDefer.length; i++) {
+	if (imgDefer[i].getAttribute('data-src')) {
+		imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+	}
+}
+
 mainVue();
 scrollReveal();
 
