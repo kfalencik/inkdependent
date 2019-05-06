@@ -28,7 +28,7 @@ export default function() {
 		},
 		mounted: function() {
 			this.year = new Date().getFullYear();
-			this.heroTotalSlides = document.querySelector('.hero').childElementCount - 2;
+			this.heroTotalSlides = document.querySelector('.hero').childElementCount - 3;
 			this.initHeroSlider();
 
 			let app = this;
@@ -52,7 +52,7 @@ export default function() {
 					xfbml: true,
 					version: 'v3.2'
 				});
-	
+
 				FB.api(
 					'/inkdependenttattoos?fields=albums.limit(50){name,count,cover_photo{source},photos{source}}&access_token=EAAe39aH7hokBAIZAaXIjr6yIvAZBZBvnZBi6vJvrRjsyh3knyfKH1E7zkmnYrWB45G3OaqK5MbqRHngfTKu25JKChaJP8uEwDXAC6SO7CjS6PZB9yRPh95lGqvXQy1ZCRsW5Aks7qF7l1WDaciQn8ZAXjZCvsdCumdWM6koVtKYMHgZDZD',
 					function(response) {
@@ -65,7 +65,7 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/marcinptak_tattoo';
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10160033361505582') {
 								// Marek 2018
 								album.name = 'Marek';
@@ -73,75 +73,75 @@ export default function() {
 								album.order = 1;
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10153556071625582') {
 								// Daniel
-	
+
 								album.instagram = 'https://www.instagram.com/danielbacz';
 								album.order = 2;
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10156539880325582') {
 								// Wojtek
-	
+
 								album.instagram = 'https://www.instagram.com/alternative_bodyart_by_wojtek';
 								album.order = 3;
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10159146265255582') {
 								// Gzy
-	
+
 								album.name = 'Gzy Ex Silesia';
 								album.instagram = 'https://www.instagram.com/gzyexsilesia';
 								album.order = 4;
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10160843000760582') {
 								// Karol
-	
+
 								album.name = 'Karol';
 								album.instagram = 'https://www.instagram.com/charlie__lame';
 								album.order = 5;
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10160543615490582') {
 								// Sofia
-	
+
 								album.name = 'Sofia';
 								album.instagram = 'https://www.instagram.com/pochiehuntie';
 								album.order = 6;
 								app.tattooAlbums.push(album);
 							}
-	
+
 							if (album.id === '10158468256865582') {
 								// Ash
-	
+
 								album.name = 'Ash';
 								album.instagram = 'https://www.instagram.com/achristieart';
 								album.order = 7;
 								app.tattooAlbums.push(album);
 							}
-	
-	
+
+
 						});
-	
+
 						app.tattooAlbums.sort((a, b) => (a.order > b.order) ? 1 : -1);
-	
+
 						setInterval(function() {
 							if (app.staggerTattooAlbums < app.tattooAlbums.length) {
 								app.staggerTattooAlbums++;
 							}
 						}, 500);
-	
+
 					}
 				);
 			}, 1000);
 
-			
+
 		},
 		methods: {
 			initHeroSlider: function() {
@@ -216,7 +216,7 @@ export default function() {
 					let service_id = "default_service";
 					let template_id = "template_0FUSa2lo";
 
-					emailjs.sendForm(service_id,template_id,myform).then(function(){ 
+					emailjs.sendForm(service_id,template_id,myform).then(function(){
 						//alert("Sent!");
 					}, function(err) {
 						//alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
