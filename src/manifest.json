@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "en-uk",
+    "name": "Inkdependent",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://inkdependent.eu",
+    "short_name": "Inkdependent",
+    "theme_color": "#000000",
+    "description": "Inkdependent - Tattoo & Piercing, Edinburgh",
+    "orientation": "portrait",
+    "background_color": "#000000",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": ["images/logo.png"]
+}
