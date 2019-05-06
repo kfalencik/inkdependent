@@ -4,16 +4,7 @@ self.addEventListener('install', function(event) {
 			return cache.addAll([
 				'./',
 				'./index.html',
-				'./images/logo.png',
-				'./images/logo-small.png',
-				'./images/marker.png',
-				'./styles/main.css',
-				'./images/slideshow/slide-1.jpg',
-				'./images/slideshow/slide-2.jpg',
-				'./images/slideshow/slide-3.jpg',
-				'./images/slideshow/slide-4.jpg',
-				'./images/graphics/about-us.jpg',
-				'./images/graphics/social.jpg',
+				'./images/logo.png'
 			]);
 		})
 	);
