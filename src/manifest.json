@@ -12,5 +12,11 @@
     "background_color": "#000000",
     "related_applications": [],
     "prefer_related_applications": false,
-    "icons": ["images/logo.png"]
+    "icons": [
+		{
+			"src": "images/logo.png",
+			"type": "image/png",
+			"sizes": "315x315"
+		}
+	]
 }
