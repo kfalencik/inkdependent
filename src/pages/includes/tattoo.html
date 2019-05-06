@@ -13,13 +13,13 @@
 		</transition>
 
 		<transition-group class="row" name="fade">
-			<div v-if="tattooAlbums.length > 0 && staggerTattooAlbums > index" v-for="(item, index) in tattooAlbums" :key="index" class="tattoo__item u-text-center col-md-4 col-lg-3">
+			<div itemscope v-if="tattooAlbums.length > 0 && staggerTattooAlbums > index" v-for="(item, index) in tattooAlbums" :key="index" class="tattoo__item u-text-center col-md-4 col-lg-3">
 				<div class="tattoo__item-image" @click="openTattooAlbum(index)">
 					<img :src="item.cover_photo.source" :alt="item.name" />
 				</div>
 
 				<div class="tattoo__item-title">
-					<h3 class="h3 u-white">${item.name}</h3>
+					<h3 itemprop="name" class="h3 u-white">${item.name}</h3>
 					<p><a :href="item.instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a></p>
 				</div>
 
