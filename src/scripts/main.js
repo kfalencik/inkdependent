@@ -3,7 +3,6 @@
 'use strict';
 
 import './vendor/polyfills';
-import './server-worker.js';
 import mainVue from './main-vue';
 import scrollReveal from './scroll-reveal';
 
