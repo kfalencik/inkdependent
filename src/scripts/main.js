@@ -57,7 +57,9 @@ map.on('load', function () {
 map.scrollZoom.disable();
 
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/service-worker.js')
+	navigator.serviceWorker.register('/service-worker.js', {
+		updateViaCache: 'none'
+	})
 	.then(function(registration) {
 		console.log('Registration successful, scope is:', registration.scope);
 	})
