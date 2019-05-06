@@ -3,19 +3,7 @@ self.addEventListener('install', function(event) {
 		caches.open('inkdependent').then(function(cache) {
 			return cache.addAll([
 				'./',
-				'./index.html',
-				'./images/logo.png',
-				'./images/logo-small.png',
-				'./images/marker.png',
-				'./styles/main.css',
-				'./scripts/main.js',
-				'./images/slideshow/slide-1.jpg',
-				'./images/slideshow/slide-2.jpg',
-				'./images/slideshow/slide-3.jpg',
-				'./images/slideshow/slide-4.jpg',
-				'./images/graphics/about-us.jpg',
-				'./images/graphics/social.jpg',
-				'./favicon.ico'
+				'./index.html'
 			]);
 		})
 	);
