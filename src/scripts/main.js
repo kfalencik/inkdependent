@@ -9,13 +9,6 @@ import scrollReveal from './scroll-reveal';
 mainVue();
 scrollReveal();
 
-// Defer images
-let imgDefer = document.getElementsByTagName('img');
-for (let i = 0; i < imgDefer.length; i++) {
-	if (imgDefer[i].getAttribute('data-src')) {
-		imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-	}
-}
 (function() {
 	emailjs.init("user_zMe7fkxzmtQpKn9E5lzTw");
 })();

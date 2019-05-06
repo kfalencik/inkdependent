@@ -9,7 +9,7 @@
 		<transition-group :name="heroSlideDirection">
 			<div :key="{{ loop.index }}" v-if="heroCurrentSlide == {{ loop.index }}" class="hero__slide">
 				<div class="hero__slide-image">
-					<img src="" data-src="{{ item.image }}" alt="Slide {{ loop.index }}" />
+					<img src="{{ item.image }}" alt="Slide {{ loop.index }}" />
 				</div>
 
 				<div class="hero__slide-content u-text-center">
