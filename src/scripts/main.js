@@ -6,6 +6,8 @@ import './vendor/polyfills';
 import mainVue from './main-vue';
 import scrollReveal from './scroll-reveal';
 
+mainVue();
+scrollReveal();
 
 // Defer images
 let imgDefer = document.getElementsByTagName('img');
@@ -14,13 +16,9 @@ for (let i = 0; i < imgDefer.length; i++) {
 		imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
 	}
 }
-
-mainVue();
-scrollReveal();
-
-(function(){
+(function() {
 	emailjs.init("user_zMe7fkxzmtQpKn9E5lzTw");
- })();
+})();
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2ZhbGVuY2lrIiwiYSI6Im5KTlFLZjQifQ._3v1pa90DdSiutiwCiIccg';
 
