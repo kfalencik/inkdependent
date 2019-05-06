@@ -2,8 +2,8 @@
 
 	<h1 class="sr-only">{{ title }}</h1>
 
-	<button @click="changeSlide(heroCurrentSlide - 1)" class="hero__nav-item"><i class="fas fa-chevron-left"></i></button>
-	<button @click="changeSlide(heroCurrentSlide + 1)" class="hero__nav-item"><i class="fas fa-chevron-right"></i></button>
+	<button @click="changeSlide(heroCurrentSlide - 1)" class="hero__nav-item" title="Previous"><i class="fas fa-chevron-left"></i></button>
+	<button @click="changeSlide(heroCurrentSlide + 1)" class="hero__nav-item" title="Next"><i class="fas fa-chevron-right"></i></button>
 
 	{% for item in slideshow %}
 		<transition-group :name="heroSlideDirection">

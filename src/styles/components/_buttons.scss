@@ -1,7 +1,7 @@
 .btn{
 	cursor: pointer;
 	background: #fff;
-	color: #333;
+	color: #fff;
 	padding: 15px 35px;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -13,7 +13,6 @@
 
 	&:hover{
 		background: $gold-color;
-		color: #fff;
 	}
 
 	&--to-top{
