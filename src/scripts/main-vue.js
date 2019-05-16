@@ -74,6 +74,14 @@ export default function() {
 								app.tattooAlbums.push(album);
 							}
 
+							if (album.id === '10160398834995582'){
+								// Marek Oil Paintings
+								album.name = 'Marek Paintings';
+								album.instagram = 'https://www.instagram.com/marekskalny_art';
+								album.order = 2;
+								app.tattooAlbums.push(album);
+							}
+
 							if (album.id === '10153556071625582') {
 								// Daniel
 
@@ -104,6 +112,15 @@ export default function() {
 
 								album.name = 'Karol';
 								album.instagram = 'https://www.instagram.com/charlie__lame';
+								album.order = 5;
+								app.tattooAlbums.push(album);
+							}
+
+							if (album.id === '10158809026710582') {
+								// Aga
+
+								album.name = 'Aga';
+								album.instagram = 'https://www.instagram.com/pelikan.baba/';
 								album.order = 5;
 								app.tattooAlbums.push(album);
 							}
