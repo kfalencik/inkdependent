@@ -10,7 +10,6 @@ module.exports = function(gulp, plugins, config, errorHandler) {
 			})
 			.pipe(plugins.vinylSourceStream(bundle + '.min.js'))
 			.pipe(plugins.vinylBuffer())
-			.pipe(plugins.uglify())
 			.pipe(gulp.dest(config.paths.output.scripts));
 		});
 
