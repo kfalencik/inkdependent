@@ -54,7 +54,7 @@ export default function() {
 				});
 
 				FB.api(
-					'/inkdependenttattoos?fields=albums.limit(50){name,count,cover_photo{source},photos{source}}&access_token=EAAe39aH7hokBAIZAaXIjr6yIvAZBZBvnZBi6vJvrRjsyh3knyfKH1E7zkmnYrWB45G3OaqK5MbqRHngfTKu25JKChaJP8uEwDXAC6SO7CjS6PZB9yRPh95lGqvXQy1ZCRsW5Aks7qF7l1WDaciQn8ZAXjZCvsdCumdWM6koVtKYMHgZDZD',
+					'/inkdependenttattoos?fields=albums.limit(250){name,count,cover_photo{source},photos{source}}&access_token=EAAe39aH7hokBAIZAaXIjr6yIvAZBZBvnZBi6vJvrRjsyh3knyfKH1E7zkmnYrWB45G3OaqK5MbqRHngfTKu25JKChaJP8uEwDXAC6SO7CjS6PZB9yRPh95lGqvXQy1ZCRsW5Aks7qF7l1WDaciQn8ZAXjZCvsdCumdWM6koVtKYMHgZDZD',
 					function(response) {
 						let albums = response.albums.data;
 						albums.forEach(function(album) {
@@ -64,6 +64,19 @@ export default function() {
 								album.order = 0;
 								album.instagram = 'https://www.instagram.com/marcinptak_tattoo';
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10160033361505582') {
@@ -72,6 +85,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/marekskalny_art';
 								album.order = 1;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10160398834995582'){
@@ -80,6 +106,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/marekskalny_art';
 								album.order = 2;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10153556071625582') {
@@ -88,14 +127,39 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/danielbacz';
 								album.order = 2;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10156539880325582') {
 								// Wojtek
-
 								album.instagram = 'https://www.instagram.com/alternative_bodyart_by_wojtek';
 								album.order = 3;
-								app.tattooAlbums.push(album);
+								app.tattooAlbums.push(album);			
+								
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10159146265255582') {
@@ -105,6 +169,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/gzyexsilesia';
 								album.order = 4;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10160843000760582') {
@@ -114,6 +191,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/charlie__lame';
 								album.order = 5;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10158809026710582') {
@@ -123,6 +213,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/pelikan.baba/';
 								album.order = 5;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10160543615490582') {
@@ -132,6 +235,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/pochiehuntie';
 								album.order = 6;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 							if (album.id === '10158468256865582') {
@@ -141,6 +257,19 @@ export default function() {
 								album.instagram = 'https://www.instagram.com/achristieart';
 								album.order = 7;
 								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
 							}
 
 
