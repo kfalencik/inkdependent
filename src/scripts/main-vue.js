@@ -272,6 +272,28 @@ export default function() {
 								getAllPhotos();
 							}
 
+							if (album.id === '10156569798145582') {
+								// Scarification and piercing
+
+								album.name = 'Scarification and piercing';
+								album.instagram = 'https://www.instagram.com/alternative_bodyart_by_wojtek/';
+								album.order = 8;
+								app.tattooAlbums.push(album);
+
+								const getAllPhotos = async function(){
+									let nextPage = album.photos.paging.next;
+
+									while(album.photos.data.length < album.count){
+										const response = await fetch(nextPage);
+										const json = await response.json();
+										album.photos.data = album.photos.data.concat(json.data);
+										nextPage = json.paging.next;
+									}
+								}
+
+								getAllPhotos();
+							}
+
 
 						});
 
